@@ -3,11 +3,11 @@
 
 :root {
   --color-dark: #1b1b1b;
-  --color-light: #f8f8f8;
+  --color-light: #ffffff;
   --color-detail: #d3fa3a;
 }
 * {
   font-family: "Roboto", sans-serif;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
 }

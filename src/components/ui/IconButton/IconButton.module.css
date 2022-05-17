@@ -1,0 +1,29 @@
+.icon_button {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 52px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  background-color: var(--color-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.icon_button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(238, 238, 238, 0.419);
+  transform: translateY(-2px);
+}
+
+.icon_button_dark:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.icon_button_dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}

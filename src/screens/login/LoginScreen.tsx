@@ -1,8 +1,12 @@
 import React from "react";
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Container } from "../../components";
 import { useAuth } from "../../context/AuthContext";
 import { LocationParams } from "../../types";
+
+import Form from "./components/Form/Form";
+import Presentantion from "./components/Presentation/Presentantion";
 
 function LoginScreen() {
   let navigate = useNavigate();
@@ -16,18 +20,18 @@ function LoginScreen() {
 
   useEffect(() => {
     const newUser = localStorage.getItem("@nothink:user");
-    console.log({ newUser });
     if (newUser) {
-      auth.signin(newUser?.toString()!, () =>
+      auth.signin(newUser.toString(), () =>
         navigate("/dashboard", { replace: true })
       );
     }
   }, [auth, from, navigate]);
 
   return (
-    <div>
-      <div onClick={handleSubmit}>LoginScreen</div>
-    </div>
+    <Container>
+      <Presentantion />
+      <Form onClick={handleSubmit} />
+    </Container>
   );
 }
 
